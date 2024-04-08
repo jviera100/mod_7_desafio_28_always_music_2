@@ -1,8 +1,13 @@
 import express from 'express';
+// import setupStaticFolder from './staticFolder.js';
 import router from './routes/routes.js';
 import {registrarEstudiante, obtenerEstudiantePorRut, obtenerTodosLosEstudiantes, actualizarEstudiante, eliminarEstudiante} from "./controllers/queries.js"; 
 const app = express();
 const PORT = 3000;
+
+// // Configuración de la carpeta estática
+// const staticApp = setupStaticFolder();
+// app.use(staticApp);
 
 //middlewares
 app.use(router);
